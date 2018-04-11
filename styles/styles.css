@@ -1,3 +1,68 @@
 body {
-  background-color: rgb(2, 132, 130);
+  background-color: rgb(2,132,130);
 }
+
+.spilled-milk {
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+}
+
+.milk-carton {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.carton {
+  margin: 2px;
+}
+
+.top-carton {
+  background-color: white;
+  position: relative;
+  height: 10px;
+  width: 150px;
+}
+
+.middle-carton {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-middle-carton {
+  background-color: white;
+  width: 150px;
+  height: 80px;
+  transform: skew(-20deg);
+}
+
+.right-middle-carton {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 70px solid white;
+  transform: rotate(-15deg);
+}
+
+.base-carton {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-base-carton {
+  background-color: white;
+  height: 200px;
+  width: 150px;
+}
+
+.right-base-carton {
+  background-color: white;
+  width: 80px;
+  height: 200px;
+  transform: skew(-20deg) rotate(-20deg);
+}
+
