@@ -240,9 +240,19 @@ body {
   border-bottom-right-radius: 30px;
   max-width: 50%;
   margin-top: 30px;
+  animation: frown .5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes frown {
-
+  0% {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  100% {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
 }
 
