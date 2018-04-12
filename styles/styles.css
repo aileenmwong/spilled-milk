@@ -12,10 +12,20 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
+  z-index: 1;
+  animation: spill 2s ease-in 1;
+  animation-fill-mode: forwards;
+  transform: rotate(0deg);
 }
 
-.carton {
-  margin: 2px;
+@keyframes spill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+
 }
 
 .top-carton {
@@ -23,6 +33,8 @@ body {
   position: relative;
   height: 10px;
   width: 150px;
+  margin-left: 34px;
+  margin-top: 20px;
 }
 
 .middle-carton {
@@ -35,16 +47,18 @@ body {
   background-color: white;
   width: 150px;
   height: 80px;
-  transform: skew(-20deg);
+  transform: skew(-19deg);
+  margin: 8px 11px -16px 17px;
 }
 
 .right-middle-carton {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 70px solid white;
-  transform: rotate(-15deg);
+  border-left: 27px solid transparent;
+  border-right: 38px solid transparent;
+  border-bottom: 66px solid white;
+  transform: rotate(-130deg);
+  margin: 29px 51px -26px -29px;
 }
 
 .base-carton {
@@ -57,12 +71,25 @@ body {
   background-color: white;
   height: 200px;
   width: 150px;
+  margin: 20px 2px 2px 2px;
 }
 
 .right-base-carton {
   background-color: white;
-  width: 80px;
-  height: 200px;
+  width: 72px;
+  height: 210px;
   transform: skew(-20deg) rotate(-20deg);
+  margin-left: 5px;
+  margin-bottom: -20px;
 }
 
+
+.puddle {
+  position: absolute;
+  background-color: lightpink;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  z-index: -1;
+  margin-top: 200px;
+}
